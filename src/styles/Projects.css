@@ -1,0 +1,123 @@
+.projects {
+  background: var(--dark-bg);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--surface-fill);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-card);
+  padding: 2.5rem;
+  transition: border-color 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo),
+    background 0.35s var(--ease-out-expo);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.07) 45%,
+    transparent 70%
+  );
+  transform: rotate(12deg);
+  transition: transform 0.65s var(--ease-out-expo);
+  pointer-events: none;
+}
+
+.project-card:hover::after {
+  transform: rotate(12deg) translateX(280%);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-glow-lg);
+  border-color: var(--surface-border-strong);
+  background: var(--surface-fill-hover);
+}
+
+.project-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-glow);
+  position: relative;
+  z-index: 1;
+}
+
+.project-icon.gradient-1 {
+  background: var(--gradient-1);
+}
+
+.project-icon.gradient-2 {
+  background: var(--gradient-2);
+}
+
+.project-icon.gradient-3 {
+  background: var(--gradient-3);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.project-tech-tag {
+  background: var(--chip-bg);
+  border: 1px solid var(--surface-border-strong);
+  color: var(--text-primary);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.25s var(--ease-out-expo), transform 0.25s var(--ease-out-expo);
+}
+
+.project-tech-tag:hover {
+  background: var(--chip-bg-hover);
+  transform: scale(1.05);
+}
+
+@media (max-width: 568px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

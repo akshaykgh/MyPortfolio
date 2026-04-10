@@ -1,0 +1,109 @@
+.skills {
+  background: var(--dark-secondary);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.skill-category {
+  background: var(--surface-fill);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  transition: border-color 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo),
+    background 0.35s var(--ease-out-expo);
+}
+
+.skill-category:hover {
+  box-shadow: var(--shadow-glow-lg);
+  border-color: var(--surface-border-strong);
+  background: var(--surface-fill-hover);
+}
+
+.category-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.skill-item {
+  background: var(--chip-bg);
+  border: 1px solid var(--surface-border-strong);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: box-shadow 0.25s var(--ease-out-expo), border-color 0.25s var(--ease-out-expo);
+  cursor: default;
+}
+
+.skill-item:hover {
+  background: var(--gradient-1);
+  border-color: transparent;
+  box-shadow: var(--shadow-glow);
+}
+
+.certifications {
+  background: var(--surface-fill);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  text-align: center;
+  transition: border-color 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo);
+}
+
+.certifications:hover {
+  border-color: var(--surface-border-strong);
+  box-shadow: var(--shadow-glow);
+}
+
+.certifications-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cert-item {
+  background: var(--chip-bg);
+  border: 1px solid var(--surface-border-strong);
+  color: var(--text-primary);
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.25s var(--ease-out-expo), transform 0.25s var(--ease-out-expo),
+    box-shadow 0.25s var(--ease-out-expo);
+}
+
+.cert-item:hover {
+  background: var(--chip-bg-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

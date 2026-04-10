@@ -1,0 +1,107 @@
+.education {
+  background: var(--dark-bg);
+}
+
+.education-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-card {
+  background: var(--surface-fill);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-card);
+  padding: 2.5rem;
+  position: relative;
+  transition: border-color 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo),
+    background 0.35s var(--ease-out-expo);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-1);
+  opacity: 0.85;
+  border-radius: 4px 0 0 4px;
+}
+
+.education-card:hover {
+  box-shadow: var(--shadow-glow-lg);
+  border-color: var(--surface-border-strong);
+  background: var(--surface-fill-hover);
+}
+
+.education-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-glow);
+}
+
+.education-degree {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.education-institution {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.education-location {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.education-period {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.education-gpa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--chip-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--surface-border);
+}
+
+.gpa-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.gpa-value {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.education-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
