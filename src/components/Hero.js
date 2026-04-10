@@ -90,8 +90,8 @@ const Hero = () => {
             Senior Software Engineer | Full-Stack Developer | Cloud Enthusiast
           </motion.p>
           <motion.p className="hero-description" variants={itemVariants}>
-            I enjoy building applications that solve real problems with software that is clear, dependable,
-            and straightforward to grow over time.
+            I enjoy building applications and AI-driven solutions that solve real problems with software that
+            is clear, dependable, and straightforward to grow over time.
           </motion.p>
           <motion.div className="hero-contact" variants={itemVariants}>
             <a href="tel:607-343-8852" className="contact-item">
