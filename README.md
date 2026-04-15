@@ -4,13 +4,13 @@ A modern, responsive portfolio website built with React, featuring smooth animat
 
 ## Features
 
-- 🎨 Modern, attractive UI with gradient accents
-- 📱 Fully responsive design
-- ✨ Smooth scroll animations using Framer Motion
-- 🎯 Interactive navigation with active section highlighting
-- 💼 Complete showcase of experience, education, projects, and skills
-- 📧 Contact form integration
-- 🌐 Social media links
+-  Modern, attractive UI with gradient accents
+-  Fully responsive design
+-  Smooth scroll animations using Framer Motion
+-  Interactive navigation with active section highlighting
+-  Complete showcase of experience, education, projects, and skills
+-  Contact form integration
+-  Social media links
 
 ## Getting Started
 
