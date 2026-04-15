@@ -116,6 +116,31 @@
   transform: scale(1.05);
 }
 
+.project-github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1px solid var(--surface-border-strong);
+  background: rgba(124, 108, 240, 0.08);
+  transition: border-color 0.3s var(--ease-out-expo), background 0.3s var(--ease-out-expo),
+    box-shadow 0.3s var(--ease-out-expo);
+  position: relative;
+  z-index: 1;
+}
+
+.project-github-link:hover {
+  border-color: var(--primary-color);
+  background: var(--surface-fill-hover);
+  box-shadow: var(--shadow-glow);
+}
+
 @media (max-width: 568px) {
   .projects-grid {
     grid-template-columns: 1fr;

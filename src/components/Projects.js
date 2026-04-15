@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaMobile, FaBrain } from 'react-icons/fa';
+import { FaMobile, FaBrain, FaGithub, FaStickyNote, FaReact } from 'react-icons/fa';
 import './../styles/Projects.css';
 
 const Projects = () => {
@@ -10,7 +10,8 @@ const Projects = () => {
       description: 'Developed a high-accuracy ASD prediction model using Decision Trees, Random Forest, and XGBoost with advanced preprocessing and hyperparameter tuning.',
       icon: <FaBrain />,
       technologies: ['Python', 'Machine Learning', 'XGBoost', 'Random Forest', 'Decision Trees'],
-      gradient: 'gradient-1'
+      gradient: 'gradient-1',
+      githubUrl: 'https://github.com/akshaykgh/AutismPredictionUsingML'
     },
     {
       title: 'Smart India Hackathon — Government of Maharashtra',
@@ -18,6 +19,24 @@ const Projects = () => {
       icon: <FaMobile />,
       technologies: ['Android', 'Java', 'Firebase', 'Government Integration'],
       gradient: 'gradient-2'
+    },
+    {
+      title: 'Smart Notes & Reminder Manager',
+      description:
+        "Full-stack notes app with session-based authentication, tagging, global search, and reminders with pending or completed states. Parses natural phrases for smart due-date suggestions, includes a dashboard for today's tasks and recent notes, and ships with Docker Compose for local PostgreSQL, PHP API, and React + Vite.",
+      icon: <FaStickyNote />,
+      technologies: ['PHP', 'React', 'Vite', 'PostgreSQL', 'Docker'],
+      gradient: 'gradient-3',
+      githubUrl: 'https://github.com/akshaykgh/SmartNoteAndReminder'
+    },
+    {
+      title: 'Personal Portfolio Website',
+      description:
+        'This site: a responsive React portfolio with Framer Motion, section-based navigation with active highlighting, and a cohesive dark theme using CSS custom properties. Showcases experience, education, projects, skills, and contact.',
+      icon: <FaReact />,
+      technologies: ['React', 'Framer Motion', 'React Icons', 'CSS3'],
+      gradient: 'gradient-1',
+      githubUrl: 'https://github.com/akshaykgh/MyPortfolio'
     }
   ];
 
@@ -36,7 +55,7 @@ const Projects = () => {
         <div className="projects-grid">
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.title}
               className="project-card"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -54,6 +73,18 @@ const Projects = () => {
                   <span key={techIndex} className="project-tech-tag">{tech}</span>
                 ))}
               </div>
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-github-link"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <FaGithub aria-hidden />
+                  View on GitHub
+                </a>
+              )}
             </motion.div>
           ))}
         </div>

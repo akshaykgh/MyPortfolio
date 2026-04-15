@@ -29,6 +29,9 @@ const Navbar = ({ activeSection }) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      const path = `${window.location.pathname}${window.location.search}`;
+      const newUrl = sectionId === 'home' ? path : `${path}#${sectionId}`;
+      window.history.replaceState(null, '', newUrl);
       setIsOpen(false);
     }
   };

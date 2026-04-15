@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { motion, useReducedMotion } from 'framer-motion';
 import './../styles/Hero.css';
@@ -6,6 +6,8 @@ import './../styles/Hero.css';
 const Hero = () => {
   const reduceMotion = useReducedMotion();
   const [pointer, setPointer] = useState({ x: 0, y: 0 });
+  const [bursts, setBursts] = useState([]);
+  const burstIdRef = useRef(0);
 
   const onPointerMove = useCallback((e) => {
     if (reduceMotion) return;
@@ -44,8 +46,32 @@ const Hero = () => {
       ? {}
       : { x: mx * strength * pointer.x, y: my * strength * pointer.y };
 
+  const handleHeroPointerDown = useCallback(
+    (e) => {
+      if (reduceMotion) return;
+      if (e.target.closest('a, button, input, textarea, select, [data-no-hero-burst]')) return;
+
+      const section = e.currentTarget;
+      const rect = section.getBoundingClientRect();
+      const id = ++burstIdRef.current;
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const sparkCount = 10;
+      const angles = Array.from(
+        { length: sparkCount },
+        (_, i) => (360 / sparkCount) * i + (Math.random() - 0.5) * 18
+      );
+
+      setBursts((prev) => [...prev, { id, x, y, angles }]);
+      window.setTimeout(() => {
+        setBursts((prev) => prev.filter((b) => b.id !== id));
+      }, 920);
+    },
+    [reduceMotion]
+  );
+
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero" onPointerDown={handleHeroPointerDown}>
       <div className="hero-grid" aria-hidden />
       <div className="hero-background">
         <motion.div
@@ -64,6 +90,27 @@ const Hero = () => {
           transition={{ type: 'spring', stiffness: 26, damping: 18, mass: 0.6 }}
         />
       </div>
+      {bursts.map((b) => (
+        <div
+          key={b.id}
+          className="hero-click-burst"
+          style={{ left: `${b.x}px`, top: `${b.y}px` }}
+          aria-hidden
+        >
+          <span className="hero-click-burst__core" />
+          <span className="hero-click-burst__wave" />
+          <span className="hero-click-burst__wave hero-click-burst__wave--late" />
+          <div className="hero-click-burst__sparks">
+            {b.angles.map((deg, i) => (
+              <span
+                key={i}
+                className="hero-click-burst__spark"
+                style={{ '--spark-angle': `${deg}deg` }}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
       <div className="container">
         <motion.div
           className="hero-content"
