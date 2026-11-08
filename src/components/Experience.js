@@ -9,23 +9,16 @@ const Experience = () => {
       title: 'Software Engineer Intern',
       company: 'Lenguas Club LLC',
       location: 'New York, USA',
-      period: 'Sep 2025 – Present',
+      period: 'Sep 2025 – Aug 2026',
       technologies: [
-        'Node.js',
-        'Express.js',
-        'MySQL',
-        'Sequelize',
-        'TypeScript',
-        'React',
-        'Next.js',
-        'Docker',
-        'AWS',
-        'CloudWatch'
+        'React', 'Next.js', 'GraphQL', 'Java 21', 'Spring Boot',
+        'TypeScript', 'MySQL', 'Redis', 'Docker', 'AWS',
+        'Python', 'LangChain', 'OpenAI API', 'Pinecone'
       ],
       achievements: [
-        'Architected a teacher scheduling platform with Node.js, Express.js, MySQL (Sequelize ORM), TypeScript, and React (Next.js), supporting 150+ users and 40+ instructors—replacing Excel workflows with 95% automation',
-        'Optimized scheduling for 400+ weekly schedules with sub-second latency, including 26 data validations per run',
-        'Deployed with Docker on AWS and monitored via CloudWatch to maintain 99.5% service availability'
+        'Built a responsive React, Next.js, and GraphQL scheduling platform and teacher portal for 100+ teachers and 20+ admins, replacing a manual Excel workflow to achieve 95% operational automation and real-time coordination',
+        'Developed the application using Java 21, Spring Boot, TypeScript, MySQL, Redis, Docker and AWS, developing a validation engine that processes scheduling requests at sub-second latency against 26 conflict checks to maintain 400+ weekly schedules',
+        'Built a LLM-powered RAG Operations Copilot using Python, Next.js, LangChain, OpenAI API, and Pinecone to index teacher handbooks, scheduling policies, and training guides, enabling administrators and instructors to answer policy and workflow questions through natural language while reducing internal support requests by 55%'
       ]
     },
     {
@@ -46,21 +39,15 @@ const Experience = () => {
       location: 'Mumbai, India',
       period: 'Oct 2022 – Aug 2024',
       technologies: [
-        'Java',
-        'Spring Boot',
-        'React',
-        'WPF',
-        'C#',
-        'Apache Kafka',
-        'SQL',
-        'AWS',
-        'Kubernetes'
+        'Java 17', 'Spring Boot', 'Spring Cloud', 'Spring Data JPA',
+        'Microservices', 'React', 'SQL', 'Python', 'MongoDB',
+        'Apache Kafka', 'AWS', 'Kubernetes', 'Jenkins', 'CI/CD'
       ],
       achievements: [
-        'Led development of Java Spring Boot microservices for ETF workflows (~$4.5B AUM in scope) and user-facing React dashboards, improving approval efficiency by 75%',
-        'Designed high-volume distributed batch processing with SQL-optimized pipelines, reducing trade execution time by 80%',
-        'Built event-driven architecture with Apache Kafka, integrating services with React dashboards and WPF (C#) UIs, cutting manual monitoring by 40%',
-        'Ran services on AWS Kubernetes, modernizing 50+ modules and increasing development velocity by 30%'
+        'Automated legacy ETF approval workflows using Java 17, Spring Boot, Spring Cloud, Spring Data JPA, Microservices, and React, eliminating tedious manual validation processes to deliver $160K+ in annual savings and reduce turnaround times by 75%',
+        'Designed high-volume batch processing pipelines handling millions of daily records from multiple transaction streams, optimizing complex SQL queries to slash end-of-day trade processing time from 45 minutes to 5 minutes',
+        'Engineered an event-driven architecture using Python, MongoDB, and Apache Kafka, developing decoupled producer-consumer microservices for real-time trade anomaly detection and deploying automated alerting streams that cut manual monitoring by 40%',
+        'Orchestrated application containers on AWS Kubernetes while building automated Jenkins CI/CD pipelines, modernizing 50+ modules and slashing software release cycles from 20 to 4 hours'
       ]
     },
     {
@@ -69,21 +56,12 @@ const Experience = () => {
       location: 'Mumbai, India',
       period: 'Aug 2019 – Sep 2022',
       technologies: [
-        'Java',
-        'Spring Boot',
-        'React',
-        'WPF',
-        'C#',
-        'AWS',
-        'Oracle DB',
-        'JUnit',
-        'Mockito',
-        'CI/CD'
+        'AWS', 'Java 11', 'Spring Boot', 'TypeScript', 'Hibernate',
+        'React', 'ASP.NET', 'C#', 'REST APIs', 'Oracle DB', 'JUnit', 'Mockito'
       ],
       achievements: [
-        'Engineered Java Spring Boot microservices on AWS in a 25-member Agile team; owned the Portfolio module with React UI and WPF (C#) components',
-        'Mentored five engineers and used CI/CD for Oracle DB–backed microservices, reducing cycle time by 30%',
-        'Implemented automated testing with JUnit and Mockito, reducing production issues and improving MTTR by 35%'
+        'Built AWS-based Portfolio microservices with Java 11, Spring Boot, TypeScript, and Hibernate, enhanced React and ASP.NET C# applications, designed REST APIs, and implemented JUnit and Mockito tests to improve reliability and speed feature delivery',
+        'Developed high-throughput REST APIs and optimized Oracle DB services to seamlessly process 10,000+ daily transactions, while leading code reviews for a 5-engineer team to cut deployment defects by 35%'
       ]
     }
   ];

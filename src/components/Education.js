@@ -9,7 +9,7 @@ const Education = () => {
       degree: 'Master of Science in Computer Science',
       institution: 'State University of New York at Binghamton',
       location: 'Binghamton, New York',
-      period: 'May 2026',
+      period: 'Dec 2026',
       gpa: '3.71 / 4.00',
       description: 'Specializing in software engineering, cloud computing, and machine learning.'
     },
